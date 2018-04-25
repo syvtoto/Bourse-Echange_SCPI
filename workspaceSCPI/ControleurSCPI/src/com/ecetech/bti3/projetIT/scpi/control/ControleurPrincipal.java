@@ -67,16 +67,16 @@ public class ControleurPrincipal extends HttpServlet {
 			case "auth" : // test de connection
 				forward = authentifier(request);
 				break;
-			case "listBien" :
+			case "listParts" :
 				ArrayList<Bien> allBiens = BienDAO.getAllBiens();
 				request.setAttribute("biens", allBiens);
-				forward = "admin/pages/gerer_mes_biens.jsp";
+				forward = "admin/pages/gerer_mes_parts.jsp";
 				break;
 			case "dashboard" :
 				forward = "admin/pages/dashboard.jsp";
 				break;
-			case "bienEnVente" :
-				forward = "admin/pages/biens_en_vente.jsp";
+			case "partsEnVente" :
+				forward = "admin/pages/parts_en_vente.jsp";
 				break;
 			case "index" :
 				forward = "index.jsp";
@@ -106,7 +106,7 @@ public class ControleurPrincipal extends HttpServlet {
 //		if(nUser != null)
 //		{
 	        if (!(nUser.getLogin().isEmpty())) {
-	            forward = "controleur?action=listBien";
+	            forward = "controleur?action=listParts";
 	            System.out.println("Bravo tu es connecté");
 	            HttpSession session = request.getSession();
 	//            if (nUser.isAdmin()) {  // methode à définir

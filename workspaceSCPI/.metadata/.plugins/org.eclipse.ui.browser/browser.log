@@ -255,3 +255,13 @@ avr. 25, 2018 13:45:47.00 Unable to read VR Path Registry from C:\Users\Thomas\A
 avr. 25, 2018 13:45:56.90 Unable to read VR Path Registry from C:\Users\Thomas\AppData\Local\openvr\openvrpaths.vrpath
 avr. 25, 2018 13:46:23.65 Unable to read VR Path Registry from C:\Users\Thomas\AppData\Local\openvr\openvrpaths.vrpath
 avr. 25, 2018 13:47:38.12 [Parent 8916, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+avr. 25, 2018 14:00:07.75 Unable to read VR Path Registry from C:\Users\Thomas\AppData\Local\openvr\openvrpaths.vrpath
+avr. 25, 2018 14:00:11.86 [Child 7488, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+avr. 25, 2018 14:00:12.00 [Child 7488, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+avr. 25, 2018 14:01:01.05 Unable to read VR Path Registry from C:\Users\Thomas\AppData\Local\openvr\openvrpaths.vrpath
+avr. 25, 2018 14:02:04.74 [Parent 8916, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+avr. 25, 2018 14:02:04.74 [Child 8924, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+avr. 25, 2018 14:04:08.13 [Child 8924, Chrome_ChildThread] WARNING: pipe error: 109Unable to read VR Path Registry from C:\Users\Thomas\AppData\Local\openvr\openvrpaths.vrpath
+avr. 25, 2018 14:09:38.88 Unable to read VR Path Registry from C:\Users\Thomas\AppData\Local\openvr\openvrpaths.vrpath
+avr. 25, 2018 14:12:03.41 [Parent 8916, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+avr. 25, 2018 14:12:03.43 [Child 14948, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346

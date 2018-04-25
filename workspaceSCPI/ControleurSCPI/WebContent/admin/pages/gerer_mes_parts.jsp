@@ -58,20 +58,18 @@
             
                <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Liste des Biens</div>
+          <i class="fa fa-table"></i> Liste des Parts</div>
         <div class="card-body">
           <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>Type</th>
-                  <th>Spécifité</th>
-                  <th>Statut</th>
-                  <th>Superficie</th>                  
+                  <th>Type de SCPI</th>
+                  <th>Cible</th>
+                  <th>Nombres de Parts</th>                  
                   <th>Opérations</th>
                 </tr>
               </thead>
- 			
               <tbody>
               <% ArrayList<Bien> allB = (ArrayList<Bien>)request.getAttribute("biens"); 
               	System.out.println("jsp");
@@ -88,7 +86,6 @@
 	 					out.println("<td>vendu</td>");
 	 				}
 	 				out.println("<td>"+allB.get(i).getTaille()+"m<sup>2</sup></td>");
-// 	 				out.println("<td>"+allB.get(i).getType()+"</td>"); // adresse
 	 				out.println("<td><button type='button' class='btn btn-success'>Mettre en vente</button> -<a class='btn btn-info' href='#' >Détails</a></td>");
 	 				out.println("</tr>");
  				}
