@@ -2,21 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="font-a" key="selection"/>
+		<item value="valeur" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="specificite"/>
+			<item value="type"/>
+			<item value="num"/>
+			<item value="Num"/>
+			<item value="Bien"/>
+			<item value="bien"/>
 			<item value="font-a"/>
 			<item value="font"/>
-			<item value="chevron"/>
-			<item value="paradise slider"/>
-			<item value="header"/>
-			<item value="head"/>
-			<item value="js"/>
 		</list>
 		<list key="replacehistory">
+			<item value="valeur"/>
+			<item value="nombre"/>
+			<item value="id"/>
+			<item value="Id"/>
+			<item value="Part"/>
 			<item value="./js"/>
 		</list>
 	</section>
@@ -24,7 +30,7 @@
 		<item value="257" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="381" key="DIALOG_HEIGHT"/>
-		<item value="701" key="DIALOG_X_ORIGIN"/>
-		<item value="210" key="DIALOG_Y_ORIGIN"/>
+		<item value="399" key="DIALOG_X_ORIGIN"/>
+		<item value="200" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
