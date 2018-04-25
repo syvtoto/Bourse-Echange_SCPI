@@ -51,7 +51,6 @@ private ClientDAO cli = new ClientDAO();
 		update.setPrenom("aranga");
 		update.setTel("0102030405");
 		update.setEmail("quelquchose@truc.chose");
-		update.setIdentifiantAdresse("ajout");
 		update.setLogin("azefer");
 		int i = cli.updateClientByNum(update, "ajout");
 		if (i == 1) {

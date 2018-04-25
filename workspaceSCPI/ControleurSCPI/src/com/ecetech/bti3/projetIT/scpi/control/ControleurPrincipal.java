@@ -68,14 +68,16 @@ public class ControleurPrincipal extends HttpServlet {
 				forward = authentifier(request);
 				break;
 			case "listParts" :
-				ArrayList<Bien> allBiens = BienDAO.getAllBiens();
-				request.setAttribute("biens", allBiens);
+				ArrayList<PartSCPI> allParts = PartDAO.getAllParts();
+				request.setAttribute("parts", allParts);
 				forward = "admin/pages/gerer_mes_parts.jsp";
 				break;
 			case "dashboard" :
 				forward = "admin/pages/dashboard.jsp";
 				break;
 			case "partsEnVente" :
+				ArrayList<PartSCPI> PartsEnVentes = PartDAO.getAllPartsEnVente();
+				request.setAttribute("parts", PartsEnVentes);
 				forward = "admin/pages/parts_en_vente.jsp";
 				break;
 			case "index" :
@@ -107,8 +109,9 @@ public class ControleurPrincipal extends HttpServlet {
 //		{
 	        if (!(nUser.getLogin().isEmpty())) {
 	            forward = "controleur?action=listParts";
-	            System.out.println("Bravo tu es connecté");
+//	            System.out.println("Bravo tu es connecté");
 	            HttpSession session = request.getSession();
+	            session.setAttribute("nom", nUser.getLogin());
 	//            if (nUser.isAdmin()) {  // methode à définir
 	//                session.setAttribute("role", "admin");
 	//            } else {

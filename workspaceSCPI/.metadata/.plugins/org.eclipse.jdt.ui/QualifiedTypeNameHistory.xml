@@ -6,4 +6,8 @@
 <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 <fullyQualifiedTypeName name="com.ecetech.bti3.projetIT.scpi.beans.CompteUtilisateur"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.ecetech.bti3.projetIT.scpi.beans.Part"/>
+<fullyQualifiedTypeName name="java.lang.Double"/>
+<fullyQualifiedTypeName name="com.ecetech.bti3.projetIT.scpi.beans.PartSCPI"/>
+<fullyQualifiedTypeName name="com.ecetech.bti3.projetIT.scpi.dao.PartDAO"/>
 </qualifiedTypeNameHistroy>

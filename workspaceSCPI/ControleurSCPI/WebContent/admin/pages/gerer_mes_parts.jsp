@@ -64,30 +64,35 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
               <thead>
                 <tr>
-                  <th>Type de SCPI</th>
-                  <th>Cible</th>
-                  <th>Nombres de Parts</th>                  
+                  <th>SCPI</th>
+                  <th>Nombres de parts</th>
+                  <th>Valeur d'un part</th>                
                   <th>Opérations</th>
                 </tr>
               </thead>
               <tbody>
-              <% ArrayList<Bien> allB = (ArrayList<Bien>)request.getAttribute("biens"); 
-              	System.out.println("jsp");
- 				for(int i=0; i<allB.size(); i++)
+              <% ArrayList<PartSCPI> allP = (ArrayList<PartSCPI>)request.getAttribute("parts"); 
+              	String user = (String)session.getAttribute("nom");
+ 				for(int i=0; i<allP.size(); i++)
  				{
-	 				System.out.println(allB.get(i).toString());
- 					out.println("<tr>");
-	 				out.println("<td>"+allB.get(i).getType()+"</td>");
-	 				out.println("<td>"+allB.get(i).getSpecificites()+"</td>");
-	 				if(allB.get(i).getStatut() == 0){
-	 					out.println("<td>en vente</td>");
-	 				}
-	 				else if(allB.get(i).getStatut() == 1){
-	 					out.println("<td>vendu</td>");
-	 				}
-	 				out.println("<td>"+allB.get(i).getTaille()+"m<sup>2</sup></td>");
-	 				out.println("<td><button type='button' class='btn btn-success'>Mettre en vente</button> -<a class='btn btn-info' href='#' >Détails</a></td>");
-	 				out.println("</tr>");
+//  					System.out.println("nom : "+user+" ; compte : "+allP.get(i).getCompte());
+ 					if(user.equals(allP.get(i).getCompte()))
+	 				{
+// 	 					System.out.println(allP.get(i).toString());
+	 					out.println("<tr>");
+	 					out.println("<td>"+allP.get(i).getSCPI()+"</td>");
+		 				out.println("<td>"+allP.get(i).getNombre()+"</td>");
+		 				out.println("<td>"+allP.get(i).getValeur()+"</td>");
+		 				if(allP.get(i).getStatut() == 0){
+		 					out.println("<td>en vente</td>");
+		 				}
+		 				else if(allP.get(i).getStatut() == 1){
+		 					out.println("<td>vendu</td>");
+		 				}
+		 				out.println("<td><button type='button' class='btn btn-success'>Mettre en vente</button> - <a class='btn btn-info' href='#' >Détails</a></td>");
+		 				out.println("</tr>");
+	 				}			
+ 					
  				}
  				
  			%>

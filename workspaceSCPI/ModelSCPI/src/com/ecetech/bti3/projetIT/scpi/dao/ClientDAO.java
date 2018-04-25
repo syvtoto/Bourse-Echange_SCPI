@@ -29,7 +29,6 @@ public class ClientDAO {
 			clientTmp.setPrenom(ConnectionDB.getRes().getString("prenom"));
 			clientTmp.setTel(ConnectionDB.getRes().getString("tel"));
 			clientTmp.setEmail(ConnectionDB.getRes().getString("email"));
-			clientTmp.setIdentifiantAdresse(ConnectionDB.getRes().getString("identifiant_adresse"));
 			clientTmp.setLogin(ConnectionDB.getRes().getString("login"));
 
 		}
@@ -57,7 +56,6 @@ public class ClientDAO {
 			clientTmp.setPrenom(ConnectionDB.getRes().getString("prenom"));
 			clientTmp.setTel(ConnectionDB.getRes().getString("tel"));
 			clientTmp.setEmail(ConnectionDB.getRes().getString("email"));
-			clientTmp.setIdentifiantAdresse(ConnectionDB.getRes().getString("identifiant_adresse"));
 			clientTmp.setLogin(ConnectionDB.getRes().getString("login"));
 		}
 		// ajout du client a l'array
@@ -106,15 +104,13 @@ public class ClientDAO {
 		String prenom = client.getPrenom(); 
 		String tel = client.getTel(); 
 		String email = client.getEmail();
-		String identifiantAdresse = client.getIdentifiantAdresse();
 		
 		
 		
 
 
 		String req = "UPDATE client SET numero = '"+numero+"', nom = '"+nom+"',prenom = '"+prenom+"', "
-				+ "tel = '"+tel+"',email= '"+email+"', identifiant_adresse = '"+identifiantAdresse+"' "
-				+ "WHERE numero ='"+num+"' ";
+				+ "tel = '"+tel+"',email= '"+email+"' "+ "WHERE numero ='"+num+"' ";
 		try {
 			result = ConnectionDB.getStm().executeUpdate(req);	
 		} catch (SQLException ex)
@@ -140,8 +136,8 @@ public class ClientDAO {
 		int result = -1;
 		ConnectionDB.DBConnexion();
 
-		String req = "INSERT INTO client (numero, nom, prenom, tel, email, identifiant_adresse, login) "
-				+ "VALUES ('"+numero+"','"+nom+"','"+prenom+"','"+tel+"','"+email+"','"+identifiantAdresse+"','"+login+"') ";
+		String req = "INSERT INTO client (numero, nom, prenom, tel, email, login) "
+				+ "VALUES ('"+numero+"','"+nom+"','"+prenom+"','"+tel+"','"+email+"','"+login+"') ";
 		try {
 			result = ConnectionDB.getStm().executeUpdate(req);
 		} catch (SQLException ex)

@@ -41,10 +41,10 @@
                             <a href="controleur?action=dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                          <li>
-                            <a href="controleur?action=bienEnVente"><i class="fa fa-table fa-fw"></i> Biens en ventes</a>
+                            <a href="controleur?action=partsEnVente"><i class="fa fa-table fa-fw"></i> Parts en ventes</a>
                         </li>
                         <li>
-                            <a href="controleur?action=listBien"><i class="fa fa-table fa-fw"></i>Gérer mes biens</a>
+                            <a href="controleur?action=listParts"><i class="fa fa-table fa-fw"></i>Gérer mes parts</a>
                         </li>
                
           

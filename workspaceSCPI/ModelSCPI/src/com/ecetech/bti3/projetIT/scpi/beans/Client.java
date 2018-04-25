@@ -7,7 +7,6 @@ public class Client {
 	private String prenom;
 	private String tel;
 	private String email;
-	private String identifiantAdresse;
 	private String login;
 	
 	public Client(String numero, String nom, String prenom, String tel, String email, String identifiantAdresse,
@@ -18,7 +17,6 @@ public class Client {
 		this.prenom = prenom;
 		this.tel = tel;
 		this.email = email;
-		this.identifiantAdresse = identifiantAdresse;
 		this.login = login;
 	}
 	
@@ -64,14 +62,6 @@ public class Client {
 
 	public void setEmail(String email) {
 		this.email = email;
-	}
-
-	public String getIdentifiantAdresse() {
-		return identifiantAdresse;
-	}
-
-	public void setIdentifiantAdresse(String identifiantAdresse) {
-		this.identifiantAdresse = identifiantAdresse;
 	}
 
 	public String getLogin() {
