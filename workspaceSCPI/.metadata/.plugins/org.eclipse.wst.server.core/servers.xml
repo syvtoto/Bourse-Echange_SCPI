@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="1" auto-publish-time="0" hostname="localhost" id="GlassFish 4.0 at localhost" name="GlassFish 4.0 at localhost" runtime-id="GlassFish 4.0" server-type="org.glassfish.jst.server.glassfish4" server-type-id="org.glassfish.jst.server.glassfish4" start-timeout="240" stop-timeout="240" timestamp="5">
+    <map key="generic_server_instance_properties" sunappserver.adminname="admin" sunappserver.adminpassword="" sunappserver.adminserverportnumber="4848" sunappserver.domainpath="C:\glassfish\glassfish4\glassfish\domains\domain1" sunappserver.keepSessions="true" sunappserver.serveraddress="localhost" sunappserver.serverportnumber="8080"/>
+    <list key="modules" value0="ControleurSCPI::org.eclipse.jst.jee.server:ControleurSCPI::jst.web::3.1" value1="View2SCPI::org.eclipse.jst.jee.server:View2SCPI::jst.web::3.1" value2="ViewSCPI::org.eclipse.jst.jee.server:ViewSCPI::jst.web::3.1"/>
+    <list key="Generic_Server_Modules_List" value0="org.eclipse.jst.jee.server:ControleurSCPI" value1="org.eclipse.jst.jee.server:View2SCPI" value2="org.eclipse.jst.jee.server:ViewSCPI"/>
+  </server>
+  <server hostname="localhost" id="HTTP Preview at localhost" name="HTTP Preview at localhost" runtime-id="HTTP Preview" server-type="org.eclipse.wst.server.preview.server" server-type-id="org.eclipse.wst.server.preview.server" start-timeout="240" stop-timeout="240" timestamp="1">
+    <list key="modules" value0="ViewSCPI::org.eclipse.wst.web.internal.deployables.static:ViewSCPI::wst.web::1.0"/>
+  </server>
+</servers>
