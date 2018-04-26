@@ -88,9 +88,9 @@ public class PartDAOTest {
 		b.setStatut(1);
 		int i = Part.updatePartById(b, 1);
 		if (i == 1) {
-			System.out.println("Update by Id : "+i);
+			System.out.println("Update part by Id : "+i);
 		} else {
-			System.out.println("Update by Id : invalide");
+			System.out.println("Update part by Id : invalide");
 		}
 	}
 	

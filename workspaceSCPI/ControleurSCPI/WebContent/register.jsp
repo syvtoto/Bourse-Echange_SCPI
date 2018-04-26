@@ -4,7 +4,7 @@
     <%@include file="./includes/head.html" %>
     <link rel="stylesheet" href="./style/login.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
-    <title>Password Forgot</title>
+    <title>Register</title>
 </head>
 <body>
 <header>

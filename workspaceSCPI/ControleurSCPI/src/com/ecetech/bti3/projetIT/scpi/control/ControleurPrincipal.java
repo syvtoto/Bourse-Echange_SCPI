@@ -83,6 +83,9 @@ public class ControleurPrincipal extends HttpServlet {
 			case "index" :
 				forward = "index.jsp";
 				break;
+			case "login" :
+				forward = "login.jsp";
+				break;
 			default : 
 				forward="index.jsp";
 				break;

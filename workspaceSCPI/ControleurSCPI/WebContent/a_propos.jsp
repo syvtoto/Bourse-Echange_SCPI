@@ -4,7 +4,7 @@
 <head>
 	<%@include file="./includes/head.html" %>
 	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
-    <title>SCPI : Bourse d'Ã©change</title>
+    <title>SCPI : Bourse d'échange</title>
 </head>
 <body class="container-fluid">
 <header>

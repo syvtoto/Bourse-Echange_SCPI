@@ -7,7 +7,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="controleur?action=index">SCPI ADMIN</a>
+                <a class="navbar-brand" href="controleur?action=index">Retour</a>
             </div>
             <!-- /.navbar-header -->
 

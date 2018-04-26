@@ -8,18 +8,18 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-    <title>SCPI : Bourse d'Ã©change</title>
+    <title>SCPI : Bourse d'échange</title>
     
 </head>
 <body class="container-fluid">
 <header>
     <%@include file="./includes/header.html" %>
 </header>
-<main>
+<main class="home">
     <!-- Where all the magic happens -->
     <!-- LOGIN FORM -->
     <div class="text-center" style="padding:50px 0">
-        <div class="logo">Login</div>
+        <div class="logo text-white">Login</div>
         <!-- Main Form -->
         <div class="login-form-1">
             <form id="login-form" class="text-left" action="controleur?action=auth" method="POST">
