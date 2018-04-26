@@ -304,3 +304,23 @@ avr. 25, 2018 16:25:19.68 [Child 4028, Chrome_ChildThread] WARNING: pipe error: 
 avr. 25, 2018 16:27:17.73 [Child 4028, Chrome_ChildThread] WARNING: pip[Parent 8916, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
 avr. 25, 2018 16:27:18.60 [Child 15584, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
 avr. 25, 2018 16:28:24.81 [Parent 8916, Gecko_IOThread] WARNING: pipe error: 232: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 513
+
+avr. 26, 2018 22:19:13.35 NEW SESSION
+avr. 26, 2018 22:19:13.35 Unable to read VR Path Registry from C:\Users\Thomas\AppData\Local\openvr\openvrpaths.vrpath
+avr. 26, 2018 22:19:17.31 Unable to read VR Path Registry from C:\Users\Thomas\AppData\Local\openvr\openvrpaths.vrpath
+avr. 26, 2018 22:19:23.31 Unable to read VR Path Registry from C:\Users\Thomas\AppData\Local\openvr\openvrpaths.vrpath
+avr. 26, 2018 22:19:26.71 Unable to read VR Path Registry from C:\Users\Thomas\AppData\Local\openvr\openvrpaths.vrpath
+avr. 26, 2018 22:19:35.33 Unable to read VR Path Registry from C:\Users\Thomas\AppData\Local\openvr\openvrpaths.vrpath
+avr. 26, 2018 22:19:54.18 Unable to read VR Path Registry from C:\Users\Thomas\AppData\Local\openvr\openvrpaths.vrpath
+avr. 26, 2018 22:21:05.48 [Child 9076, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+avr. 26, 2018 22:21:05.53 [Parent 13884, Gecko_IOThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+avr. 26, 2018 22:21:05.53 [Child 15676, Chrome_ChildThread] WARNING: pipe error: 109: file z:/build/build/src/ipc/chromium/src/chrome/common/ipc_channel_win.cc, line 346
+avr. 26, 2018 22:21:05.60 [Child 15676, Chrome_ChildThread] WAR
+avr. 26, 2018 22:21:05.60 ###!!! [Parent][MessageChannel] Error: (msgtype=0x15008D,name=PBrowser::Msg_UpdateNativeWindowHandle) Closed channel: cannot send/recv
+avr. 26, 2018 22:21:05.62 
+avr. 26, 2018 22:21:05.62 
+avr. 26, 2018 22:21:05.62 ###!!! [Parent][MessageChannel] Error: (msgtype=0x150080,name=PBrowser::Msg_Destroy) Closed channel: cannot send/recv
+avr. 26, 2018 22:21:05.68 
+avr. 26, 2018 22:21:08.25 
+avr. 26, 2018 22:21:08.27 ###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+avr. 26, 2018 22:21:08.28 
