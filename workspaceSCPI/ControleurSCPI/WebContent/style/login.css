@@ -24,6 +24,7 @@ body {
     background: #efefef;
     padding: 10px;
     font-family: 'Varela Round';
+    background-image: url('../images/headern.jpg');
 }
 /*=== 2. Anchor Link ===*/
 a {
