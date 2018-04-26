@@ -50,7 +50,7 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">SCPI</h1>
+                    <h1 class="page-header">Mes parts</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -66,7 +66,8 @@
                 <tr>
                   <th>SCPI</th>
                   <th>Nombres de parts</th>
-                  <th>Valeur d'un part</th>                
+                  <th>Valeur d'un part</th>
+                  <th>Statut</th>              
                   <th>Opérations</th>
                 </tr>
               </thead>
@@ -84,12 +85,13 @@
 		 				out.println("<td>"+allP.get(i).getNombre()+"</td>");
 		 				out.println("<td>"+allP.get(i).getValeur()+"</td>");
 		 				if(allP.get(i).getStatut() == 0){
-		 					out.println("<td>en vente</td>");
+		 					out.println("<td>possédé</td>");
+		 					out.println("<td><button type='button' class='btn btn-success'>Mettre en vente</button> - <a class='btn btn-info' href='#' >Détails</a></td>");
 		 				}
 		 				else if(allP.get(i).getStatut() == 1){
-		 					out.println("<td>vendu</td>");
+		 					out.println("<td>en vente</td>");
+		 					out.println("<td><a class='btn btn-info' href='#' >Détails</a></td>");
 		 				}
-		 				out.println("<td><button type='button' class='btn btn-success'>Mettre en vente</button> - <a class='btn btn-info' href='#' >Détails</a></td>");
 		 				out.println("</tr>");
 	 				}			
  					

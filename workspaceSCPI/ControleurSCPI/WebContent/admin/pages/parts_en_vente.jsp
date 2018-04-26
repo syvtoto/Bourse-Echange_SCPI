@@ -40,7 +40,7 @@
 		<div id="page-wrapper">
 			<div class="row">
 				<div class="col-lg-12">
-					<h1 class="page-header">SCPI</h1>
+					<h1 class="page-header">Parts en Vente</h1>
 				</div>
 				<!-- /.col-lg-12 -->
 			</div>
