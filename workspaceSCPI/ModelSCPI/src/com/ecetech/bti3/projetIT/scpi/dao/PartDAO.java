@@ -253,5 +253,30 @@ public class PartDAO {
 		ConnectionDB.DBClose();
 		return result;
 	}
+	
+	public static ArrayList<PartSCPI> getPartByCompte(String compte) throws SQLException {
+		PartSCPI PartTmp = null;
+		//Requete
+		String req = "SELECT * FROM part WHERE compte = '"+compte+"'";
+		ConnectionDB.DBConnexion();
+		//Récupération d'un resultat après execution
+		ConnectionDB.setRes(ConnectionDB.getStm().executeQuery(req));
+
+		//Assignation des valeurs dans l'ordre
+		ArrayList<PartSCPI> PartsCompte = new ArrayList<PartSCPI>();
+		while (ConnectionDB.getRes().next()) {
+			PartTmp = new PartSCPI();
+			PartTmp.setId(ConnectionDB.getRes().getInt("id"));
+			PartTmp.setSCPI(ConnectionDB.getRes().getString("SCPI"));
+			PartTmp.setNombre(ConnectionDB.getRes().getDouble("nombre"));
+			PartTmp.setValeur(ConnectionDB.getRes().getDouble("valeur"));
+			PartTmp.setStatut(ConnectionDB.getRes().getInt("statut"));
+			PartTmp.setCompte(ConnectionDB.getRes().getString("compte"));
+			PartsCompte.add(PartTmp);
+		}
+		//Fermeture de la connection
+		ConnectionDB.DBClose();
+		return PartsCompte;
+	}
 
 }

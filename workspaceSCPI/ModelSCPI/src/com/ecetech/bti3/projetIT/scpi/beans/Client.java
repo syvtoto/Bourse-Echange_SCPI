@@ -71,6 +71,13 @@ public class Client {
 	public void setLogin(String login) {
 		this.login = login;
 	}
+
+	@Override
+	public String toString() {
+		return "Client [numero=" + numero + ", nom=" + nom + ", prenom="
+				+ prenom + ", tel=" + tel + ", email=" + email + ", login="
+				+ login + "]";
+	}
 	
 
 }

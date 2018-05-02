@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="java.util.ArrayList" %>
 <%@ page import="com.ecetech.bti3.projetIT.scpi.beans.*" %>
-
+    
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,9 +13,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SCPI ADMIN</title>
+    <title>Profil</title>
 
-    <!-- Bootstrap Core CSS -->
     <link href="./admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
@@ -37,77 +35,58 @@
 
 </head>
 
-<body >
+<body>
 
     <div id="wrapper">
 
-<!-- Navigation -->
-
-
+        <!-- Navigation -->
+    
 <%@include file="header.jsp" %>
    
+            <!-- /.navbar-static-side -->
+        </nav>
 
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Mes parts</h1>
+                    <h1 class="page-header">Mon profile</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
+            <!-- /.row notification -->
+           
             <!-- /.row -->
-            
-               <div class="card mb-3">
+              <div class="card mb-3">
         <div class="card-header">
-          <i class="fa fa-table"></i> Liste des Parts</div>
-        <div class="card-body">
-          <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-              <thead>
-                <tr>
-                  <th>SCPI</th>
-                  <th>Nombres de parts</th>
-                  <th>Valeur d'un part</th>
-                  <th>Statut</th>              
-                  <th>Opérations</th>
-                </tr>
-              </thead>
-              <tbody>
-              <% ArrayList<PartSCPI> allP = (ArrayList<PartSCPI>)request.getAttribute("parts"); 
-              	String user = (String)session.getAttribute("nom");
- 				for(int i=0; i<allP.size(); i++)
- 				{
-//  					System.out.println("nom : "+user+" ; compte : "+allP.get(i).getCompte());
- 					if(user.equals(allP.get(i).getCompte()))
-	 				{
-// 	 					System.out.println(allP.get(i).toString());
-	 					out.println("<tr>");
-	 					out.println("<td>"+allP.get(i).getSCPI()+"</td>");
-		 				out.println("<td>"+allP.get(i).getNombre()+"</td>");
-		 				out.println("<td>"+allP.get(i).getValeur()+"</td>");
-		 				if(allP.get(i).getStatut() == 0){
-		 					out.println("<td>possédé</td>");
-		 					out.println("<td><button type='button' class='btn btn-success'>Mettre en vente</button></td>");
-// 		 					 - <a class='btn btn-info' href='controleur?action=detail' >Détails</a>
-		 				}
-		 				else if(allP.get(i).getStatut() == 1){
-		 					out.println("<td>en vente</td>");
-		 					out.println("<td><button type='button' class='btn btn-success'>Retirer de la vente</button></td>");
-// 		 					 - <a class='btn btn-info' href='controleur?action=detail' >Détails</a>
-		 				}
-		 				out.println("</tr>");
-	 				}			
- 					
- 				}
- 				
- 			%>
-              </tbody>
-            </table>
-          </div>
+          
         </div>
-      </div> 
+        
+
+        <div class="card-body">
+        <% Client client = (Client)request.getAttribute("client");
+        %>
+
+            <div class="row">
+              <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3" >
+                <div class="thumbnail">
+                  <img src="./assets/images/user.png" width="40%" height="25px" alt="Photo de profile">
+                  <div class="caption">
+                    <h3><% out.print(client.getNom()+" "+client.getPrenom());%></h3>
+                    <p><% out.print("Email : "+client.getEmail()); %></p>
+                    
+                    <p><a href="#" class="btn btn-primary" role="button">Modifier</a> <a href="#" class="btn btn-default" role="button">Changer mon mot de passe</a></p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!-- /.row -->
-            
+       
+        
+        </div>
+
+
+
+
+            </div>
             <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->

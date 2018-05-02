@@ -115,5 +115,19 @@ public class PartDAOTest {
 			System.out.println("Part à vendre : invalide"+i);
 		}
 	}
+	
+	@Test
+	public void testGetPartByCompte() throws SQLException {
+		ArrayList<PartSCPI> b = Part.getPartByCompte("sandra");
+		if (b.size() > 0) {
+			System.out.println("TestGetPartByCompte : "+ b.size());
+			for(int i=0; i<b.size(); i++)
+			{
+				System.out.println(b.get(i).toString());
+			}
+//			System.out.println("Part : id = 2 -> "+b.toString());
+		}
+		else System.out.println("TestGetPartById : invalide");
+	}
 
 }

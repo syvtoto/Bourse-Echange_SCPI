@@ -71,7 +71,8 @@
 								 	 	out.println("<td>"+allP.get(i).getSCPI()+"</td>");
 								 		out.println("<td>"+allP.get(i).getNombre()+"</td>");
 								 		out.println("<td>"+allP.get(i).getValeur()+"</td>");
-								 		out.println("<td><button type='button' class='btn btn-success'>Enchérir</button> - <a class='btn btn-info' href='#' >Détails</a></td>");
+								 		out.println("<td><a class='btn btn-success' href='controleur?action=encherir'>Enchérir</a></td>");
+// 								 		 - <a class='btn btn-info' href='controleur?action=detail' >Détails</a>
 								 		out.println("</tr>");
 								 	}
 								%>

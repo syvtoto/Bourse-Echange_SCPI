@@ -2,32 +2,30 @@ package com.ecetech.bti3.projetIT.scpi.beans;
 
 import com.mysql.jdbc.StringUtils;
 
-public class Adresse {
+public class Scpi {
 	
 	private String identifiant;
 	private String rue;
 	private String cp;
 	private String ville;
 	private String pays;
-	private int ascensseur;
-	private int etage;
+	private String type;
 	
-	public Adresse(String identifiant, String rue, String cp, String ville, String pays, int ascensseur,
-			int etage) {
+	public Scpi(String identifiant, String rue, String cp, String ville, String pays, int ascensseur,
+			String type) {
 		super();
 		this.identifiant = identifiant;
 		this.rue = rue;
 		this.cp = cp;
 		this.ville = ville;
 		this.pays = pays;
-		this.ascensseur = ascensseur;
-		this.etage = etage;
+		this.type = type;
 	}
 	
 	
 
-	public Adresse() {
-		this ("", "", "", "", "", 0, 0);
+	public Scpi() {
+		this ("", "", "", "", "", 0, "");
 	}
 
 
@@ -72,19 +70,11 @@ public class Adresse {
 		this.pays = pays;
 	}
 
-	public int getAscensseur() {
-		return ascensseur;
+	public String getType() {
+		return type;
 	}
 
-	public void setAscensseur(int ascensseur) {
-		this.ascensseur = ascensseur;
-	}
-
-	public int getEtage() {
-		return etage;
-	}
-
-	public void setEtage(int etage) {
-		this.etage = etage;
+	public void setType(String type) {
+		this.type = type;
 	}
 }

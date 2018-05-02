@@ -1033,7 +1033,11 @@ Home Section style
     line-height: 6.5rem;
 }
 
-
+.home_login{
+    background: url(../images/headern.jpg);
+    background-size: cover;
+    position: relative;
+}
 
 /*
 About section style

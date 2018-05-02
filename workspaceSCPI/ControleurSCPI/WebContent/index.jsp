@@ -29,7 +29,7 @@
                             </div>
 
                             <div class="home_btns m-top-40">
-                                <a href="login.jsp" class="btn btn-primary m-top-20">JE ME CONNECTE</a>
+                                <a href="controleur?action=login" class="btn btn-primary m-top-20">JE ME CONNECTE</a>
                                 
                             </div>
 

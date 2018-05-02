@@ -7,7 +7,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="controleur?action=index">Retour</a>
+                <a class="navbar-brand" href="controleur?action=index">Retour à l'index</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -24,7 +24,8 @@
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li class="divider"></li>
-                        <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Déconnexion</a>
+                        <li><a href="controleur?action=profil">Profil</a></li>
+                        <li><a href="controleur?action=index"><i class="fa fa-sign-out fa-fw"></i> Déconnexion</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->

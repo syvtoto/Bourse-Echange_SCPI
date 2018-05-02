@@ -15,7 +15,7 @@
 <header>
     <%@include file="./includes/header.html" %>
 </header>
-<main>
+<main class="home_login">
     <!-- Where all the magic happens -->
     <!-- LOGIN FORM -->
     <div class="text-center" style="padding:50px 0">

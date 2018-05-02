@@ -59,6 +59,7 @@ public class ControleurPrincipal extends HttpServlet {
 
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
 		String forward = "index.jsp";
+		HttpSession session = request.getSession();
 		if(request.getParameter("action") != null)
 		{
 			String action = request.getParameter("action");
@@ -73,6 +74,10 @@ public class ControleurPrincipal extends HttpServlet {
 				forward = "admin/pages/gerer_mes_parts.jsp";
 				break;
 			case "dashboard" :
+				ArrayList<PartSCPI> PartsPoss = PartDAO.getPartByCompte((String) session.getAttribute("nom"));
+				request.setAttribute("partsPoss", PartsPoss);
+				ArrayList<PartSCPI> PartsVentes = PartDAO.getAllPartsEnVente();
+				request.setAttribute("partsVente", PartsVentes);
 				forward = "admin/pages/dashboard.jsp";
 				break;
 			case "partsEnVente" :
@@ -85,6 +90,18 @@ public class ControleurPrincipal extends HttpServlet {
 				break;
 			case "login" :
 				forward = "login.jsp";
+				break;
+			case "encherir" :
+				forward = "admin/pages/encherir.jsp";
+				break;
+			case "detail" :
+//				forward = "admin/pages/details_parts.jsp";
+				break;
+			case "profil" :
+				Client client = ClientDAO.getClientByLogin((String) session.getAttribute("nom"));
+				System.out.println(client.toString());
+				request.setAttribute("client", client);
+				forward = "admin/pages/mon_profil.jsp";
 				break;
 			default : 
 				forward="index.jsp";
@@ -111,7 +128,7 @@ public class ControleurPrincipal extends HttpServlet {
 //		if(nUser != null)
 //		{
 	        if (!(nUser.getLogin().isEmpty())) {
-	            forward = "controleur?action=listParts";
+	            forward = "controleur?action=dashboard";
 //	            System.out.println("Bravo tu es connecté");
 	            HttpSession session = request.getSession();
 	            session.setAttribute("nom", nUser.getLogin());

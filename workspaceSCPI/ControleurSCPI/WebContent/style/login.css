@@ -21,10 +21,12 @@ Last change	: 2015/03/27
 /*=== 1. General Structure ===*/
 html,
 body {
-    background: #efefef;
+/*     background: #efefef; */
     padding: 10px;
     font-family: 'Varela Round';
-    background-image: url('../images/headern.jpg');
+/*     background: url(../images/headern.jpg); */
+/*     background-size: cover; */
+/*     position: relative; */
 }
 /*=== 2. Anchor Link ===*/
 a {

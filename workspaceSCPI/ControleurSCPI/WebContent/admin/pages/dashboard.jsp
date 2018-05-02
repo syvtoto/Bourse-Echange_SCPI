@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="com.ecetech.bti3.projetIT.scpi.beans.*" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,12 +69,16 @@
                                     <i class="fa fa-tasks fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">12</div>
-                                    <div>Nouveaux biens ajoutés</div>
+                                    <div class="huge">
+                                    <% ArrayList<PartSCPI> partPoss = (ArrayList<PartSCPI>)request.getAttribute("partsPoss");
+                                    out.print(partPoss.size());
+                                    %>
+                                    </div>
+                                    <div>Parts en vente</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="controleur?action=partsEnVente">
                             <div class="panel-footer">
                                 <span class="pull-left">Voir Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -89,12 +95,16 @@
                                     <i class="fa fa-shopping-cart fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
-                                    <div>Demandes d'achats</div>
+                                    <div class="huge">
+                                    <% ArrayList<PartSCPI> partVente = (ArrayList<PartSCPI>)request.getAttribute("partsVente");
+                                    out.print(partVente.size());
+                                    %>
+                                    </div>
+                                    <div>Vos parts</div>
                                 </div>
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="controleur?action=listParts">
                             <div class="panel-footer">
                                 <span class="pull-left">Voir Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

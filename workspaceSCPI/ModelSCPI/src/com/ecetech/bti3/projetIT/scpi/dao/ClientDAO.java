@@ -149,6 +149,36 @@ public class ClientDAO {
 		ConnectionDB.DBClose();
 		return result;
 	}
+	
+	/**
+	 * Récupération d'un client par son numéro
+	 * @param num
+	 * @return
+	 * @throws SQLException
+	 */
+	public static Client getClientByLogin (String log) throws SQLException {
+		Client clientTmp = new Client();
+		//Requete
+		String req = "SELECT * FROM client WHERE login = '"+log+"'";
+		ConnectionDB.DBConnexion();
+		//Récupération d'un resultat après execution
+		ConnectionDB.setRes(ConnectionDB.getStm().executeQuery(req));
+
+		//Assignation des valeurs dans l'ordre
+		while (ConnectionDB.getRes().next()) {
+			clientTmp.setNumero(ConnectionDB.getRes().getString("numero"));
+			clientTmp.setNom(ConnectionDB.getRes().getString("nom"));
+			clientTmp.setPrenom(ConnectionDB.getRes().getString("prenom"));
+			clientTmp.setTel(ConnectionDB.getRes().getString("tel"));
+			clientTmp.setEmail(ConnectionDB.getRes().getString("email"));
+			clientTmp.setLogin(ConnectionDB.getRes().getString("login"));
+
+		}
+
+		//Fermeture de la connection
+		ConnectionDB.DBClose();
+		return clientTmp;
+	}
 
 	
 	
