@@ -62,8 +62,8 @@ INDEX VERSION 1.126+C:\Users\Thomas\Desktop\GitHub Project\Bourse_Echange_SCPI\w
 2915368105.index
 4206308941.index
 57213713.index
-1165165103.index
 2104995091.index
+1165165103.index
 3471399245.index
 2071858704.index
 655381796.index
@@ -72,13 +72,13 @@ INDEX VERSION 1.126+C:\Users\Thomas\Desktop\GitHub Project\Bourse_Echange_SCPI\w
 1472593332.index
 2950898852.index
 3987016788.index
-3372487397.index
 729762164.index
+3372487397.index
 1694989211.index
 762704542.index
-1414894843.index
 563511569.index
+1414894843.index
 2748409558.index
 3817751415.index
-420689123.index
 3727595767.index
+420689123.index

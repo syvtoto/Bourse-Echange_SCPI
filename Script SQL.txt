@@ -1,0 +1,93 @@
+CREATE TABLE scpi
+(
+  identifiant VARCHAR(25)                 NOT NULL
+    PRIMARY KEY,
+  rue         VARCHAR(55) DEFAULT 'NULL'  NULL,
+  cp          VARCHAR(10) DEFAULT 'NULL'  NULL,
+  ville       VARCHAR(55) DEFAULT 'NULL'  NULL,
+  pays        VARCHAR(25) DEFAULT 'NULL'  NULL,
+  type        VARCHAR(256) DEFAULT 'NULL' NULL,
+  CONSTRAINT Adresse_identifiant_uindex
+  UNIQUE (identifiant)
+)
+  ENGINE = InnoDB;
+
+INSERT INTO projetit.scpi (identifiant, rue, cp, ville, pays, type) VALUES ('ajout', 'un autre Endroit', '2', 'Ville au loin au fond', 'russie', null);
+INSERT INTO projetit.scpi (identifiant, rue, cp, ville, pays, type) VALUES ('alpha', 'rueRue1', '23456', 'villeAlpha', 'paysPays1', 'plus-value');
+INSERT INTO projetit.scpi (identifiant, rue, cp, ville, pays, type) VALUES ('beta', 'rueRue2', '34567', 'villeBeta', 'paysPays2', 'fiscal');
+INSERT INTO projetit.scpi (identifiant, rue, cp, ville, pays, type) VALUES ('gamma', 'rueRue', '12345', 'villeGamma', 'paysPays', 'rendement');
+INSERT INTO projetit.scpi (identifiant, rue, cp, ville, pays, type) VALUES ('premier', '18 jean dausset', '77176', 'savigny le temple', 'france', null);
+INSERT INTO projetit.scpi (identifiant, rue, cp, ville, pays, type) VALUES ('seconde', 'pompidou', '75000', 'paris', 'france', null);
+INSERT INTO projetit.scpi (identifiant, rue, cp, ville, pays, type) VALUES ('update', 'un Endroit', '00001', 'Ville au loin', 'allemagne', 'rendement');
+
+----------------------------------------------------------------------------------
+
+CREATE TABLE part
+(
+  id     INT                         NOT NULL
+    PRIMARY KEY,
+  SCPI   VARCHAR(256) DEFAULT 'NULL' NULL,
+  nombre DOUBLE DEFAULT 'NULL'       NULL,
+  valeur DOUBLE DEFAULT 'NULL'       NULL,
+  statut INT DEFAULT '-1'            NULL,
+  compte VARCHAR(256) DEFAULT 'NULL' NULL,
+  CONSTRAINT part_id_uindex
+  UNIQUE (id)
+)
+  ENGINE = InnoDB;
+
+INSERT INTO projetit.part (id, SCPI, nombre, valeur, statut, compte) VALUES (1, 'gamma', 20, 21, 1, 'sandra');
+INSERT INTO projetit.part (id, SCPI, nombre, valeur, statut, compte) VALUES (2, 'alpha', 5, 10, 0, 'sandra');
+INSERT INTO projetit.part (id, SCPI, nombre, valeur, statut, compte) VALUES (3, 'beta', 60, 1, 1, 'log1');
+INSERT INTO projetit.part (id, SCPI, nombre, valeur, statut, compte) VALUES (123, 'beta', 13, 7, 1, 'log2');
+INSERT INTO projetit.part (id, SCPI, nombre, valeur, statut, compte) VALUES (666, 'gamma', 12, 12, 0, null);
+
+----------------------------------------------------------------------------------
+
+CREATE TABLE compte_utilisateur
+(
+  login        VARCHAR(55)                     NOT NULL
+    PRIMARY KEY,
+  mdp          VARCHAR(55) DEFAULT 'NULL'      NULL,
+  dateCreation VARCHAR(255) DEFAULT '''NULL''' NULL,
+  actif        VARCHAR(25) DEFAULT '''NULL'''  NULL,
+  admin        INT DEFAULT '0'                 NULL,
+  CONSTRAINT compteUtilisateur_login_uindex
+  UNIQUE (login)
+)
+  ENGINE = InnoDB;
+
+INSERT INTO projetit.compte_utilisateur (login, mdp, dateCreation, actif, admin) VALUES ('log1', 'hash', 'null', 'en attente', 0);
+INSERT INTO projetit.compte_utilisateur (login, mdp, dateCreation, actif, admin) VALUES ('log2', 'mdp', null, '', 0);
+INSERT INTO projetit.compte_utilisateur (login, mdp, dateCreation, actif, admin) VALUES ('log3', 'mdp', null, '', 0);
+INSERT INTO projetit.compte_utilisateur (login, mdp, dateCreation, actif, admin) VALUES ('log5', 'hash', 'null', 'a', 0);
+INSERT INTO projetit.compte_utilisateur (login, mdp, dateCreation, actif, admin) VALUES ('sandra', 'garde', '2018-13-04', 'actif', 1);
+
+----------------------------------------------------------------------------------
+
+CREATE TABLE client
+(
+  numero VARCHAR(25)                NOT NULL
+    PRIMARY KEY,
+  nom    VARCHAR(25) DEFAULT 'NULL' NULL,
+  prenom VARCHAR(25) DEFAULT 'NULL' NULL,
+  tel    VARCHAR(15) DEFAULT 'NULL' NULL,
+  email  VARCHAR(55) DEFAULT 'NULL' NULL,
+  login  VARCHAR(25) DEFAULT 'NULL' NULL,
+  CONSTRAINT Client_numero_uindex
+  UNIQUE (numero),
+  CONSTRAINT login
+  FOREIGN KEY (login) REFERENCES compte_utilisateur (login)
+)
+  ENGINE = InnoDB;
+
+CREATE INDEX login
+  ON client (login);
+
+INSERT INTO projetit.client (numero, nom, prenom, tel, email, login) VALUES ('ajout', 'quelquun', 'aranga', '0102030405', 'quelquchose@truc.chose', 'log3');
+INSERT INTO projetit.client (numero, nom, prenom, tel, email, login) VALUES ('c2', 'bob', 'billy', '00', 'b@g.com', 'log1');
+INSERT INTO projetit.client (numero, nom, prenom, tel, email, login) VALUES ('client', 'pascale', 'jean', '01', 'j@g.com', 'log5');
+INSERT INTO projetit.client (numero, nom, prenom, tel, email, login) VALUES ('merihelm', 'Sandra', 'Merihelm', '0123456789', 'sandra@tritonChevalier.pil', 'sandra');
+
+----------------------------------------------------------------------------------
+

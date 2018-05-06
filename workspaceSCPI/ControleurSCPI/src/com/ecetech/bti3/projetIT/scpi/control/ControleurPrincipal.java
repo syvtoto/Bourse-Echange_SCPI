@@ -103,6 +103,9 @@ public class ControleurPrincipal extends HttpServlet {
 				request.setAttribute("client", client);
 				forward = "admin/pages/mon_profil.jsp";
 				break;
+			case "erreur" :
+				forward = "error.jsp";
+				break;
 			default : 
 				forward="index.jsp";
 				break;
@@ -120,30 +123,23 @@ public class ControleurPrincipal extends HttpServlet {
 		CompteUtilisateur nUser = null;
 		try {
 			nUser = c.getCompteByLogin(login, pass);
-//			System.out.println(nUser.toString());
+			System.out.println("nUser : "+nUser);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-//		if(nUser != null)
-//		{
+		if(nUser != null)
+		{
 	        if (!(nUser.getLogin().isEmpty())) {
 	            forward = "controleur?action=dashboard";
-//	            System.out.println("Bravo tu es connecté");
 	            HttpSession session = request.getSession();
 	            session.setAttribute("nom", nUser.getLogin());
-	//            if (nUser.isAdmin()) {  // methode à définir
-	//                session.setAttribute("role", "admin");
-	//            } else {
-	//                session.setAttribute("role", "user");
-	//            }
 	        } else {
-	//            forward = "Error.jsp";
-	        	forward = "index.jsp";
-	        	System.out.println("Couple login/password incorrect");
-	   //         request.setAttribute("erreur", ressource.getString("auth.erreur"));
+	            forward = "controleur?action=erreur";
+				request.setAttribute("orig", "controleur?action=login");
+				request.setAttribute("info", "Couple login/password incorrect");
 	        }
-//		}
+		}
         return forward;
     }
 

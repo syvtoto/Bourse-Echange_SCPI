@@ -74,7 +74,7 @@
                                     out.print(partPoss.size());
                                     %>
                                     </div>
-                                    <div>Parts en vente</div>
+                                    <div>Vos parts</div>
                                 </div>
                             </div>
                         </div>
@@ -100,7 +100,7 @@
                                     out.print(partVente.size());
                                     %>
                                     </div>
-                                    <div>Vos parts</div>
+                                    <div>Parts en vente</div>
                                 </div>
                             </div>
                         </div>
